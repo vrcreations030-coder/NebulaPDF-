@@ -1,0 +1,6 @@
+{
+  "name": "NebulaPDF",
+  "description": "Your Documents. Infinite Possibilities. Free PDF tools, smart AI analysis, and privacy-first local browser processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

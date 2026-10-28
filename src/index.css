@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #0B0D12;
+    --surface-elevated: #151923;
+    --surface-cosmic: #171329;
+    --border-subtle: #282D3A;
+    --accent-violet: #8B5CF6;
+    --accent-ice: #7DD3FC;
+    --text-muted: #9CA3AF;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0B0D12;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+
+  code, kbd, samp, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #282D3A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E4659;
+}
+
+/* Cosmic glows & subtle borders */
+.cosmic-border {
+  border: 1px solid #282D3A;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cosmic-border:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.cosmic-card {
+  background: #151923;
+  border: 1px solid #282D3A;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cosmic-card:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+  background: #171c28;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
